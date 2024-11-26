@@ -66,12 +66,11 @@ You have a record of books borrowed from a library for a month. Each record incl
 - If the player runs out of attempts, the program will display the correct word.
 
 **Approach:**
-- Create a list of predefined words from which the program will randomly select a word.
-- Use random.choice() to select a word from the list.
-- Scramble the selected word by converting it into a list of characters, then shuffle the list using random.shuffle().
-- Display the scrambled word to the player.
-- Allow the player 5 attempts to guess the original word.
-- For each incorrect guess, inform the player how many attempts remain.
-- If the player guesses correctly, display a success message.
-- If the player runs out of attempts, display the correct word.
-- Handle invalid input (e.g., empty guesses) and prompt the user again.
+- Create a list of predefined words and randomly select one word using random.choice().
+- Scramble the word by using random.sample() to shuffle its characters.
+- Display the scrambled word and prompt the user to guess the original word.
+- Allow the player 5 attempts to guess the word correctly.
+- After each incorrect guess, decrease the remaining attempts and inform the player of how many attempts they have left.
+- If the player guesses the word correctly, congratulate them and end the game.
+- If the player runs out of attempts, reveal the original word.
+- Ensure that the program handles invalid input (e.g., empty guesses) by asking the player to try again.
