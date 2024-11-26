@@ -44,16 +44,37 @@ You have a record of books borrowed from a library for a month. Each record incl
 Create a word scramble game where the program randomly scrambles a word and gives the player a set number of attempts to guess the original word.
 
 **Requirements:**
-- The program should start by selecting a random word from a predefined list of words.
-- The selected word should be scrambled (characters shuffled in a random order).
-- Display the scrambled word to the player and ask them to guess the original word.
-- The player should have 5 attempts to guess the word correctly.
-- For each incorrect guess, the player should be informed how many attempts they have left.
-- If the player guesses correctly within the attempts, display a congratulatory message.
-- If the player runs out of attempts, reveal the original word.
-- Handle invalid input gracefully (e.g., empty input).
 
-**Example Interaction:**
-- **Example Word:** Suppose the chosen word is "apple", which the program scrambles to "pleap".
+-The program should start by selecting a random word from a predefined list of words.
+-The selected word should be scrambled (characters shuffled in a random order).
+-Display the scrambled word to the player and ask them to guess the original word.
+-The player should have 5 attempts to guess the word correctly.
+-For each incorrect guess, the player should be informed how many attempts they have left.
+-If the player guesses correctly within the attempts, display a congratulatory message.
+-If the player runs out of attempts, reveal the original word.
+-Handle invalid input gracefully (e.g., empty input).
+-Example Interaction:
+
+**Example Word:**
+-Suppose the chosen word is "apple", which the program scrambles to "pleap".
 
 **Game Flow:**
+
+-The program will start by selecting a word from a predefined list.
+-It will scramble the word and display it.
+-The user will have five attempts to guess the original word.
+-After each incorrect guess, the program will inform the player of how many attempts remain.
+-If the player guesses the word correctly, a success message will be displayed.
+-If the player runs out of attempts, the program will display the correct word.
+
+**Approach:**
+
+-Create a list of predefined words from which the program will randomly select a word.
+-Use random.choice() to select a word from the list.
+-Scramble the selected word by converting it into a list of characters, then shuffle the list using random.shuffle().
+-Display the scrambled word to the player.
+-Allow the player 5 attempts to guess the original word.
+-For each incorrect guess, inform the player how many attempts remain.
+-If the player guesses correctly, display a success message.
+-If the player runs out of attempts, display the correct word.
+-Handle invalid input (e.g., empty guesses) and prompt the user again.
